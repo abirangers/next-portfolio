@@ -1,8 +1,5 @@
-"use client";
 import Sidebar from "@/components/sidebar";
-import { usePathname } from "next/navigation";
 import "./globals.css";
-import type { Metadata } from "next";
 import { Gothic_A1 } from "next/font/google";
 import clsx from "clsx";
 
