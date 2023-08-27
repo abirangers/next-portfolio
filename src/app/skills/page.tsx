@@ -47,7 +47,7 @@ const ListTechStack = ({ image, alt }: { image: string; alt: string }) => (
 
 const Skills = () => {
   return (
-    <section>
+    <section className="pb-[60px]">
       <h1 className="font-bold text-5xl mb-[28px]">Skills</h1>
       <div className="mt-[29px] grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         {techStack.map((item, index) => (

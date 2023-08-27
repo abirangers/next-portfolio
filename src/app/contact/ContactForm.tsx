@@ -34,7 +34,7 @@ const InputContact = ({
       type={type}
       className={clsx(
         "peer focus:outline-none focus:ring-1 focus:ring-blue-500 invalid:focus:ring-pink-500",
-        "border-2 w-full p-2 py-3 rounded-lg",
+        "border-2 w-full p-2 py-3 rounded-lg b-white",
         "text-lg font-normal",
         "transition-all duration-300 ease-in-out"
       )}
@@ -55,7 +55,9 @@ const InputContact = ({
       {title}
     </span>
     <h1
-      className={`hidden${error[name] ? "block" : ""} text-red-400 mt-1 ml-1`}
+      className={`-translate-y-6 opacity-0${
+        error[name] ? "block -translate-y-[1px] opacity-100" : ""
+      } text-red-400 transition-all duration-1000 mt-1 ml-1 -z-20`}
     >
       {name ? error[name] : undefined}
     </h1>
