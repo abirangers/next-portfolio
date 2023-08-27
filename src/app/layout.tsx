@@ -4,7 +4,7 @@ import { Gothic_A1 } from "next/font/google";
 import clsx from "clsx";
 
 const gothic_A1 = Gothic_A1({
-  weight: ["400", "700"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-inter",
   subsets: ["latin"],
 });

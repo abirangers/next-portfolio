@@ -30,10 +30,6 @@ const techStack: TechItem[] = [
     alt: "tailwind",
   },
   {
-    src: "/img/nodejs.svg",
-    alt: "nodejs",
-  },
-  {
     src: "/img/reactjs.svg",
     alt: "reactjs",
   },
