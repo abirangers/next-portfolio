@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <section className="flex flex-col">
+    <section className="flex flex-col pb-[60px]">
       <MainHeader title={"Ahmad Aby Ayyasi"} />
       <CardBio />
       <p className="mt-[36px]">

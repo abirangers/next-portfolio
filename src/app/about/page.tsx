@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 const About = () => {
   return (
-    <section className="flex flex-col">
+    <section className="flex flex-col pb-[60px]">
       <MainHeader title={"About Me"} />
       <hr />
       <p className="mb-[13px] mt-[29px]">
