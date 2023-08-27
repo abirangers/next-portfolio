@@ -60,7 +60,9 @@ const Contact = () => {
 
   return (
     <section className="pb-[60px]">
-      <h1 className="font-bold text-5xl mb-[28px]">Contact</h1>
+      <h1 className="font-bold mb-[28px] sm:text-5xl text-[32px]">
+        Contact
+      </h1>
       <div>
         <div className="flex flex-col gap-y-6 mb-14">
           {contacts.map((item, index) => (
