@@ -26,7 +26,7 @@ const BioAchieve = ({
 
 const CardBio = () => {
   return (
-    <div className="rounded-lg border border-zinc-100 w-[312px] h-[134px] p-[27px] flex items-center">
+    <div className="rounded-lg border border-zinc-100 max-w-[312px] w-full h-[134px] p-[27px] flex items-center">
       <Image src="/img/bio-image.svg" alt="bio-image" width={80} height={80} />
       <div className="ml-[24px]">
         <BioAchieve

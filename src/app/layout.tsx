@@ -24,7 +24,7 @@ export default function RootLayout({
           )}
         >
           <Sidebar />
-          <main className="basis-full">{children}</main>
+          <main className="basis-full w-full px-4 sm:px-2">{children}</main>
         </div>
       </body>
     </html>
