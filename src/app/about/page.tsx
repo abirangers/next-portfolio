@@ -1,5 +1,8 @@
+"use client";
 import MainHeader from "@/components/mainHeader";
 import { Metadata } from "next";
+import { motion } from "framer-motion";
+import { textVariant } from "@/utils/motion";
 
 export const metadata: Metadata = {
   title: "Bingers - About",
@@ -8,17 +11,22 @@ export const metadata: Metadata = {
 
 const About = () => {
   return (
-    <section className="flex flex-col pb-[60px]">
-      <MainHeader title={"About Me"} />
+    <motion.section
+      className="flex flex-col pb-[60px]"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
+    >
+      <MainHeader title={"About Me"} variant={textVariant()} />
       <hr />
-      <p className="mb-[13px] mt-[29px]">
+      <motion.p className="mb-[13px] mt-[29px]" variants={textVariant(0.25)}>
         Perkenalkan, Nama saya Ahmad Aby Ayyasi atau biasa dipanggil Aby. Saat
         ini saya berumur 16 tahun. Saya tinggal di Bogor, Jawa Barat. Saat ini,
         saya masih duduk dibangku sekolah SMK, bersekolah di SMK Plus Pelita
         Nusantara kelas XI RPL-2. Dan Sekarang, saya sedang mempelajari
         framework dari React.JS yaitu Next.JS
-      </p>
-      <p className="my-[13px]">
+      </motion.p>
+      <motion.p className="my-[13px]" variants={textVariant(0.5)}>
         Saya percaya bahwa pengembangan perangkat lunak bukan hanya tentang
         menulis kode, tetapi juga tentang memahami kebutuhan pengguna dan
         memastikan pengalaman pengguna yang optimal. Dengan itu, saya selalu
@@ -27,13 +35,13 @@ const About = () => {
         bisnis dan pengguna. Saya senang berbagi pengalaman saya dalam
         mengembangkan perangkat lunak dan memberikan solusi teknologi yang
         inovatif.
-      </p>
-      <p className="my-[13px]">
+      </motion.p>
+      <motion.p className="my-[13px]" variants={textVariant(0.75)}>
         Silakan jelajahi portofolio saya dan jangan ragu untuk menghubungi saya
         jika Anda tertarik untuk bekerja sama atau berdiskusi lebih lanjut
         tentang proyek Anda. <br /> Terima kasih telah mengunjungi halaman saya!
-      </p>
-    </section>
+      </motion.p>
+    </motion.section>
   );
 };
 

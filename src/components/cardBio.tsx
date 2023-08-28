@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-
+import { motion, Variants } from "framer-motion";
 const BioAchieve = ({
   image,
   number,
@@ -24,9 +24,12 @@ const BioAchieve = ({
   </div>
 );
 
-const CardBio = () => {
+const CardBio = ({ variant }: { variant: Variants }) => {
   return (
-    <div className="rounded-lg border border-zinc-100 max-w-[312px] w-full h-[134px] p-[27px] flex items-center">
+    <motion.div
+      variants={variant}
+      className="rounded-lg border border-zinc-100 max-w-[312px] w-full h-[134px] p-[27px] flex items-center"
+    >
       <Image src="/img/bio-image.svg" alt="bio-image" width={80} height={80} />
       <div className="ml-[24px]">
         <BioAchieve
@@ -37,7 +40,7 @@ const CardBio = () => {
         <BioAchieve image="/img/project.svg" number="20+" title="Project" />
         <BioAchieve image="/img/deal.svg" number="0" title="worked" />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { Metadata } from "next";
+import ListTechStack from "@/components/listTechStack";
 
 export const metadata: Metadata = {
   title: "Bingers - Skills",
@@ -38,12 +39,6 @@ const techStack: TechItem[] = [
     alt: "nextjs",
   },
 ];
-
-const ListTechStack = ({ image, alt }: { image: string; alt: string }) => (
-  <div className="rounded-xl flex justify-center border-2 w-full border-solid border-gray-200 bg-gray-100 p-5 hover:bg-gray-200">
-    <Image src={image} alt={alt} width={96} height={96} />
-  </div>
-);
 
 const Skills = () => {
   return (
