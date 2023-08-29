@@ -1,5 +1,5 @@
 "use client";
-import ContactForm from "./contactForm";
+import ContactForm from "../../components/contactForm";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import useMediaQuery from "@/hook/matches";
