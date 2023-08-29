@@ -1,7 +1,9 @@
 "use client";
 import React from "react";
-import { Metadata } from "next";
 import ListTechStack from "@/components/listTechStack";
+import { motion } from "framer-motion";
+import { slideIn } from "@/utils/motion";
+import useMediaQuery from "@/hook/matches";
 
 type TechItem = {
   src: string;
@@ -39,11 +41,17 @@ const SkillsPage = () => {
   return (
     <section className="pb-[60px]">
       <h1 className="font-bold mb-[28px] sm:text-5xl text-[32px]">Skills</h1>
-      <div className="mt-[29px] grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+      <motion.div
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={slideIn("left", "spring", 0.1, 1.25)}
+        className="mt-[29px] px-4 sm:px-0 grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
+      >
         {techStack.map((item, index) => (
           <ListTechStack image={item.src} alt={item.alt} key={index} />
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

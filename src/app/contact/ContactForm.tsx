@@ -1,6 +1,8 @@
 "use client";
 import { ChangeEvent, FormEvent, SyntheticEvent, useState } from "react";
 import clsx from "clsx";
+import { motion } from "framer-motion";
+import { textVariant } from "@/utils/motion";
 type InputMode = "text" | "email" | "numeric" | "search" | "tel" | "url";
 type contactInputProps = {
   title: string;
@@ -48,7 +50,7 @@ const InputContact = ({
       className={clsx(
         "peer-focus:-top-3 peer-placeholder-shown:top-[14px]",
         "transition-all duration-300 ease-in-out",
-        "text-base font-semibold bg-white",
+        "text-base font-semibold bg-white pointer-events-none",
         "absolute left-[10px] -top-3"
       )}
     >
@@ -86,8 +88,6 @@ const ContactForm = () => {
 
   const nameHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setInputName(e.target.value);
-    console.log(inputName);
-
     e.target.value === ""
       ? setError({ ...error, inputName: "Masukan Nama" })
       : setError({ ...error, inputName: "" });
@@ -95,7 +95,6 @@ const ContactForm = () => {
 
   const emailHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setInputEmail(e.target.value);
-    console.log(inputEmail);
     e.target.value === ""
       ? setError({ ...error, inputEmail: "Masukan Email" })
       : setError({ ...error, inputEmail: "" });
@@ -103,14 +102,12 @@ const ContactForm = () => {
 
   const noHpHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setInputNoHp(e.target.value);
-    console.log(inputNoHp);
     e.target.value === ""
       ? setError({ ...error, inputNoHp: "Masukan NoHp" })
       : setError({ ...error, inputNoHp: "" });
   };
   const messageHandler = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setInputMessage(e.target.value);
-    console.log(inputMessage);
     e.target.value === ""
       ? setError({ ...error, inputMessage: "Masukan Message" })
       : setError({ ...error, inputMessage: "" });
@@ -150,8 +147,6 @@ const ContactForm = () => {
       setInputNoHp("");
       setInputMessage("");
     }
-
-    console.log(error);
   };
 
   const inputContacts: contactInputProps[] = [
@@ -179,7 +174,6 @@ const ContactForm = () => {
   ];
 
   return (
-    <div>
       <form className="flex flex-col gap-y-6" onSubmit={handleSubmit}>
         {inputContacts.map((item, index) => (
           <InputContact
@@ -225,7 +219,6 @@ const ContactForm = () => {
           Kirim
         </button>
       </form>
-    </div>
   );
 };
 

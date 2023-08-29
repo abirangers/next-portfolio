@@ -2,6 +2,7 @@ import Sidebar from "@/components/sidebar";
 import "./globals.css";
 import { Gothic_A1 } from "next/font/google";
 import clsx from "clsx";
+import { ReactNode } from "react";
 
 const gothic_A1 = Gothic_A1({
   weight: ["400", "500", "600", "700"],
@@ -9,14 +10,10 @@ const gothic_A1 = Gothic_A1({
   subsets: ["latin"],
 });
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      <body className="overflow-auto overflow-x-hidden">
         <div
           className={clsx(
             "flex flex-row container mx-auto mt-[151px]",
