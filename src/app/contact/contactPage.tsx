@@ -1,6 +1,6 @@
 "use client";
-import Image from "next/image";
 import ContactForm from "./contactForm";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import useMediaQuery from "@/hook/matches";
 import { bounce, textVariant } from "@/utils/motion";
