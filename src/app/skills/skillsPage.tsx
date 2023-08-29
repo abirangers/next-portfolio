@@ -3,7 +3,6 @@ import React from "react";
 import ListTechStack from "@/components/listTechStack";
 import { motion } from "framer-motion";
 import { slideIn } from "@/utils/motion";
-import useMediaQuery from "@/hook/matches";
 
 type TechItem = {
   src: string;

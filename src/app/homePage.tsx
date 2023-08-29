@@ -5,7 +5,6 @@ import MainHeader from "../components/mainHeader";
 import CardBio from "../components/cardBio";
 import { textVariant } from "@/utils/motion";
 import Link from "next/link";
-import useMediaQuery from "@/hook/matches";
 
 const HomePage = () => {
   return (

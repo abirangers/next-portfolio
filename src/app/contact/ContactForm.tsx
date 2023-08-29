@@ -1,8 +1,6 @@
 "use client";
-import { ChangeEvent, FormEvent, SyntheticEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import clsx from "clsx";
-import { motion } from "framer-motion";
-import { textVariant } from "@/utils/motion";
 type InputMode = "text" | "email" | "numeric" | "search" | "tel" | "url";
 type contactInputProps = {
   title: string;
