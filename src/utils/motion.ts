@@ -38,6 +38,23 @@ export const slideIn = (
   },
 });
 
+export const scaleIn = () => ({
+  hidden: {
+    scale: 0,
+    opacity: 0,
+  },
+  show: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      delay: 0.5,
+      duration: 0.75,
+      ease: "easeOut",
+    },
+  },
+});
+
 export const bounce = () => ({
   hidden: {
     top: -198,

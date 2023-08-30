@@ -205,7 +205,7 @@ const ContactForm = () => {
               "peer-focus:-top-3 peer-placeholder-shown:top-[14px]",
               "transition-all duration-300 ease-in-out",
               "text-base font-semibold bg-white",
-              "absolute left-[10px] -top-3"
+              "absolute left-[10px] -top-3 pointer-events-none"
             )}
           >
             Message
@@ -213,7 +213,11 @@ const ContactForm = () => {
         </div>
         <button
           type="submit"
-          className="px-3 py-3 w-full transition-all hover:bg-blue-600 active:bg-blue-700 text-white font-semibold bg-blue-500 rounded-lg"
+          className={clsx(
+            "transition-all hover:bg-blue-700 active:bg-blue-800 active:scale-105 bg-[#2D6CDF] rounded-lg",
+            "px-3 py-3 w-full",
+            "text-white font-semibold"
+          )}
         >
           Kirim
         </button>

@@ -19,8 +19,11 @@ const NavbarItem = (item: ROUTE) => {
       <Link
         href={item.href}
         className={clsx(
-          "relative text-sm px-4 py-2 hover:bg-zinc-700/10 text-zinc-900 z-10 rounded-md font-semibold transition-all duration-300 ease-in-out",
-          isActive ? "text-blue-900" : ""
+          "relative ",
+          "rounded-md px-4 py-2 z-10",
+          "transition-all duration-300 ease-in-out",
+          "text-sm font-semibold text-zinc-900",
+          isActive ? "text-blue-900" : "hover:bg-zinc-700/10"
         )}
       >
         {item.name}
@@ -28,7 +31,7 @@ const NavbarItem = (item: ROUTE) => {
           <motion.div
             className={clsx(
               "absolute h-full w-full inset-y-0",
-              "opacity-100 rounded-md w-3/4 bg-zinc-700/10"
+              "opacity-100 rounded-md bg-zinc-700/10"
             )}
             style={{ width: "100%" }}
             layoutId="navbar-desktop"

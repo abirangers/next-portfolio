@@ -87,7 +87,7 @@ const ContactPage = () => {
       </motion.div>
       <div>
         <motion.div
-          className="flex flex-col gap-y-6 mb-14"
+          className="flex flex-col gap-y-6 mb-9"
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
