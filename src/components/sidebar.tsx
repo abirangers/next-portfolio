@@ -48,15 +48,15 @@ const NavbarItem = (item: ROUTE) => {
 
 const Sidebar = () => {
   return (
-    <div className="lg:min-w-[231px] md:min-w-[190px] sm:min-w-[164px]">
+    <div className="lg:min-w-[231px] md:min-w-[190px]">
       <Image
         src="/img/bread.svg"
         alt="Logo"
         width={54}
         height={54}
-        className="mx-4 mb-[22px] hidden sm:block"
+        className="mx-4 mb-[22px] hidden md:block"
       />
-      <div className="flex sm:flex-col sm:gap-y-[16px] absolute top-10 left-0 right-0 mx-auto gap-x-[11px] justify-center flex-row sm:static">
+      <div className="flex md:flex-col md:gap-y-[16px] absolute top-10 left-0 right-0 mx-auto gap-x-[11px] justify-center flex-row md:static">
         {NAVBAR_ROUTES.map((item, index) => (
           <NavbarItem key={index} {...item} />
         ))}

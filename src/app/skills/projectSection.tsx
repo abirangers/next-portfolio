@@ -12,7 +12,7 @@ const Project = ({
 }) => {
   return (
     <motion.div
-      className="bg-gray-100 rounded-lg border relative border-zinc-300 overflow-hidden"
+      className="bg-gray-100 rounded-lg w-3/4 md:w-full mx-auto border relative border-zinc-300 overflow-hidden"
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
@@ -47,7 +47,9 @@ const Project = ({
       </div>
       <div className="p-3">
         <h1 className="text-lg font-bold mb-2">{project.title}</h1>
-        <p className="mb-2">{project.desk}</p>
+        <p className="mb-2 whitespace-normal md:truncate lg:whitespace-normal">
+          {project.desk}
+        </p>
         <a href="" className="flex w-fit ml-auto">
           <Image src="/img/browse.svg" alt="browse" width={24} height={24} />
         </a>
@@ -69,7 +71,7 @@ const ProjectSection = () => {
       >
         Project
       </motion.h1>
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {projects.map((project, index) => (
           <Project key={index} project={project} index={index} />
         ))}
