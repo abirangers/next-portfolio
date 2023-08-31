@@ -38,7 +38,7 @@ export const slideIn = (
   },
 });
 
-export const scaleIn = () => ({
+export const scaleIn = (delay: number) => ({
   hidden: {
     scale: 0,
     opacity: 0,
@@ -48,7 +48,7 @@ export const scaleIn = () => ({
     opacity: 1,
     transition: {
       type: "spring",
-      delay: 0.5,
+      delay,
       duration: 0.75,
       ease: "easeOut",
     },

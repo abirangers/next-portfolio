@@ -46,7 +46,7 @@ const SkillsPage = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        variants={slideIn("left", "spring", 0.1, 1.25)}
+        variants={slideIn("left", "spring", 0, 1.25)}
       >
         Skills
       </motion.h1>
@@ -54,7 +54,7 @@ const SkillsPage = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        variants={slideIn("left", "spring", 0.1, 1.25)}
+        variants={slideIn("left", "spring", 0.25, 1.25)}
         className="my-[29px] px-4 sm:px-0 grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
       >
         {techStack.map((item, index) => (
