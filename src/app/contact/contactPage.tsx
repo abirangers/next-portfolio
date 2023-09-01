@@ -68,7 +68,7 @@ const ContactPage = () => {
         viewport={{ once: true }}
         variants={textVariant()}
       >
-        <h1 className="font-bold mb-[28px] sm:text-5xl text-[32px]">
+        <h1 className="font-bold mb-[28px] sm:text-5xl text-[32px] dark:text-[#FFF9D6]">
           C
           {useMediaQuery() ? (
             <motion.span

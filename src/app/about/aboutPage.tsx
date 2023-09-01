@@ -18,7 +18,7 @@ const AboutPage = () => {
       viewport={{ once: true, amount: 0.25 }}
     >
       <MainHeader title={"About Me"} variant={textVariant()} />
-      <hr />
+      <motion.hr variants={textVariant(0.25)} />
       <motion.p className="mb-[13px] mt-[29px]" variants={textVariant(0.25)}>
         Perkenalkan, Nama saya Ahmad Aby Ayyasi atau biasa dipanggil Aby. Saat
         ini saya berumur 16 tahun. Saya tinggal di Bogor, Jawa Barat. Saat ini,

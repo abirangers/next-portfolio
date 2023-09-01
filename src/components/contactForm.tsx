@@ -34,9 +34,9 @@ const InputContact = ({
       type={type}
       className={clsx(
         "peer focus:outline-none focus:ring-1 focus:ring-blue-500 invalid:focus:ring-pink-500",
-        "border-2 w-full p-2 py-3 rounded-lg b-white",
-        "text-lg font-normal",
-        "transition-all duration-300 ease-in-out"
+        "dark:border-zinc-700 dark:bg-zinc-900",
+        "border-2 w-full p-2 py-3 rounded-lg",
+        "text-lg font-normal"
       )}
       onChange={change}
       placeholder=" "
@@ -47,8 +47,8 @@ const InputContact = ({
     <span
       className={clsx(
         "peer-focus:-top-3 peer-placeholder-shown:top-[14px]",
-        "transition-all duration-300 ease-in-out",
         "text-base font-semibold bg-white pointer-events-none",
+        "dark:text-white dark:bg-zinc-900",
         "absolute left-[10px] -top-3"
       )}
     >
@@ -191,9 +191,9 @@ const ContactForm = () => {
           <textarea
             className={clsx(
               "peer focus:outline-none focus:ring-1 focus:ring-blue-500 invalid:focus:ring-pink-500",
+              "dark:border-zinc-700 dark:bg-zinc-900",
               "border-2 w-full p-2 py-3 rounded-lg",
-              "text-lg font-normal",
-              "transition-all duration-300 ease-in-out"
+              "text-lg font-normal"
             )}
             rows={6}
             placeholder=" "
@@ -203,7 +203,7 @@ const ContactForm = () => {
           <span
             className={clsx(
               "peer-focus:-top-3 peer-placeholder-shown:top-[14px]",
-              "transition-all duration-300 ease-in-out",
+              "dark:text-white dark:bg-zinc-900",
               "text-base font-semibold bg-white",
               "absolute left-[10px] -top-3 pointer-events-none"
             )}

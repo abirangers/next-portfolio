@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h1,
+  h2,
+  a,
+  /* p, */
+  /* input, */
+  /* textarea, */
+  button {
+    @apply transition-colors duration-300 dark:transition-colors dark:duration-300 ease-in-out dark:ease-in-out;
+  }
+
+  .custom-fill-color {
+    fill: #fff;
+  }
+}

@@ -28,7 +28,7 @@ const CardBio = ({ variant }: { variant: Variants }) => {
   return (
     <motion.div
       variants={variant}
-      className="rounded-lg border border-zinc-100 max-w-[312px] w-full h-[134px] p-[27px] flex items-center"
+      className="rounded-lg border border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900 max-w-[312px] w-full h-[134px] p-[27px] flex items-center"
     >
       <Image src="/img/bio-image.svg" alt="bio-image" width={80} height={80} />
       <div className="ml-[24px]">

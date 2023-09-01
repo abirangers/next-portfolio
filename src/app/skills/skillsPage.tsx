@@ -42,7 +42,7 @@ const SkillsPage = () => {
   return (
     <section className="pb-[60px]">
       <motion.h1
-        className="font-bold mb-[28px] sm:text-5xl text-[32px]"
+        className="font-bold mb-[28px] sm:text-5xl text-[32px] dark:text-[#FFF9D6]"
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}

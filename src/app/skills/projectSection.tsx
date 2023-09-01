@@ -3,6 +3,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { scaleIn, slideIn } from "@/utils/motion";
 import { ProjectsType, projects } from "@/data/projectsData";
+import clsx from "clsx";
 const Project = ({
   project,
   index,
@@ -12,7 +13,10 @@ const Project = ({
 }) => {
   return (
     <motion.div
-      className="bg-gray-100 rounded-lg w-3/4 md:w-full mx-auto border relative border-zinc-300 overflow-hidden"
+      className={clsx(
+        "bg-gray-100 rounded-lg w-3/4 md:w-full mx-auto border relative border-zinc-300 overflow-hidden",
+        "dark:bg-zinc-800 dark:border-zinc-700"
+      )}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
@@ -29,13 +33,13 @@ const Project = ({
       <div className="h-52 relative">
         <Image
           src={project.image}
-          alt="project-1"
+          alt={project.alt}
           width={2400}
           height={1439}
           className="w-full h-full object-cover"
         />
         <div className="flex gap-x-2 absolute bottom-2 right-2">
-          {project.tech?.map((tech, index) => (
+          {project.tech.map((tech, index) => (
             <div
               key={index}
               className="p-2 rounded-md flex items-center bg-zinc-950 w-fit"
@@ -50,7 +54,7 @@ const Project = ({
         <p className="mb-2 whitespace-normal md:truncate lg:whitespace-normal">
           {project.desk}
         </p>
-        <a href="" className="flex w-fit ml-auto">
+        <a href="#" className="flex w-fit ml-auto">
           <Image src="/img/browse.svg" alt="browse" width={24} height={24} />
         </a>
       </div>
@@ -59,11 +63,10 @@ const Project = ({
 };
 
 const ProjectSection = () => {
-  // console.log(projects.length);
   return (
     <>
       <motion.h1
-        className="font-bold mb-[28px] sm:text-5xl text-[32px]"
+        className="font-bold mb-[28px] sm:text-5xl text-[32px] dark:text-[#FFF9D6]"
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
