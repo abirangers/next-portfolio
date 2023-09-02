@@ -25,10 +25,10 @@ const NavbarItem = (item: ROUTE) => {
           "rounded-md px-4 py-2 z-10",
           "transition-all duration-300 ease-in-out",
           "text-sm font-semibold text-zinc-900",
-          "dark:text-white",
+          "",
           isActive
             ? "text-blue-900 dark:text-[#FFF9D6]"
-            : "hover:bg-zinc-700/10"
+            : "hover:bg-zinc-700/10 dark:text-white"
         )}
       >
         {item.name}
