@@ -6,7 +6,7 @@ import CardBio from "../components/cardBio";
 import { textVariant } from "@/utils/motion";
 import Link from "next/link";
 
-const HomePage = () => {
+const   HomePage = () => {
   return (
     <motion.section
       className="flex flex-col pb-[60px]"

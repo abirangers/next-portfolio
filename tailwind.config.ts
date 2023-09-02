@@ -14,10 +14,8 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      container: {
-        padding: {
-          // DEFAULT: "1rem",
-        },
+      fontFamily: {
+        serif: ["var(--font-inter)"],
       },
     },
     screens: {

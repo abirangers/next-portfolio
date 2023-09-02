@@ -64,14 +64,16 @@ const Sidebar = () => {
   }
   return (
     <div className="lg:min-w-[231px] md:min-w-[190px]">
-      <Image
-        src="/img/bread.svg"
-        alt="Logo"
-        width={54}
-        height={54}
-        className="mx-4 mb-[22px] hidden md:block"
-        priority
-      />
+      <div className="w-[54px] h-[54px] mx-4 mb-[22px] hidden md:block ">
+        <Image
+          src="/img/bread.svg"
+          alt="Logo"
+          width={54}
+          height={54}
+          className="w-full h-auto"
+          priority
+        />
+      </div>
       <div
         className={clsx(
           "md:flex-col md:gap-y-[16px] md:static w-fit md:mx-0 mx-auto",
@@ -84,9 +86,10 @@ const Sidebar = () => {
         ))}
         <div className="md:px-4 flex items-center">
           <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-            {theme === "dark" ? (
+            {theme === "dark" && (
               <Image src="/img/moon.svg" alt="sun" width={24} height={24} />
-            ) : (
+            )}
+            {theme === "light" && (
               <Image src="/img/sun.svg" alt="sun" width={24} height={24} />
             )}
           </button>

@@ -33,8 +33,9 @@ const InputContact = ({
     <input
       type={type}
       className={clsx(
-        "peer focus:outline-none focus:ring-1 focus:ring-blue-500 invalid:focus:ring-pink-500",
+        "peer focus:outline-none transition-all focus:ring-1 focus:ring-blue-500 invalid:focus:ring-pink-500",
         "dark:border-zinc-700 dark:bg-zinc-900",
+
         "border-2 w-full p-2 py-3 rounded-lg",
         "text-lg font-normal"
       )}
