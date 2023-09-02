@@ -86,12 +86,13 @@ const Sidebar = () => {
         ))}
         <div className="md:px-4 flex items-center">
           <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-            {theme === "dark" && (
+            {theme === "dark" ? (
               <Image src="/img/moon.svg" alt="sun" width={24} height={24} />
-            )}
-            {theme === "light" && (
+            ) : (
               <Image src="/img/sun.svg" alt="sun" width={24} height={24} />
             )}
+            {/* {theme === "light" && (
+            )} */}
           </button>
         </div>
       </div>
