@@ -10,7 +10,7 @@ const TechStackAnimation = ({ image, alt }: { image: string; alt: string }) => (
     className={clsx(
       "rounded-xl flex justify-center border-2 w-96 sm:w-full mx-auto",
       "border-solid border-gray-200  bg-gray-100 p-5 hover:bg-gray-200",
-      ""
+      "dark:bg-zinc-800 dark:border-zinc-700"
     )}
     drag
     dragTransition={{
@@ -36,7 +36,7 @@ const ListTechStack = ({ image, alt }: { image: string; alt: string }) => {
     <motion.div
       className={clsx(
         "rounded-xl flex justify-center border-2 w-full max-w-[384px] justify-self-center",
-        "border-solid border-gray-200 bg-gray-100 p-5 hover:bg-gray-200",
+        "border-solid border-gray-200 bg-gray-100 p-5 hover:bg-gray-200"
       )}
       initial="hidden"
       whileInView="show"
