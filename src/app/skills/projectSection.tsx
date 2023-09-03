@@ -14,7 +14,8 @@ const Project = ({
   return (
     <motion.div
       className={clsx(
-        "bg-gray-100 rounded-lg w-3/4 md:w-full mx-auto border relative border-zinc-300 overflow-hidden",
+        "bg-gray-100 rounded-lg w-5/6 sm:w-3/4 md:w-full mx-auto border relative h-[370px] border-zinc-300 overflow-hidden",
+        "flex flex-col",
         "dark:bg-zinc-800 dark:border-zinc-700"
       )}
       initial="hidden"
@@ -30,7 +31,7 @@ const Project = ({
         },
       }}
     >
-      <div className="h-52 relative">
+      <div className="relative">
         <Image
           src={project.image}
           alt={project.alt}
@@ -51,10 +52,8 @@ const Project = ({
       </div>
       <div className="p-3">
         <h1 className="text-lg font-bold mb-2">{project.title}</h1>
-        <p className="mb-2 whitespace-normal md:truncate lg:whitespace-normal">
-          {project.desk}
-        </p>
-        <a href="#" className="flex w-fit ml-auto">
+        <p className="mb-2">{project.desk}</p>
+        <a href="#" className="absolute bottom-3 right-3">
           <Image src="/img/browse.svg" alt="browse" width={24} height={24} />
         </a>
       </div>

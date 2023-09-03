@@ -6,7 +6,16 @@ import CardBio from "../components/cardBio";
 import { textVariant } from "@/utils/motion";
 import Link from "next/link";
 
-const   HomePage = () => {
+const SocialMed = ({ href, title }: { href: string; title: string }) => (
+  <Link
+    href={href}
+    className=" underline underline-offset-2 px-4 py-2 font-semibold"
+  >
+    {title}
+  </Link>
+);
+
+const HomePage = () => {
   return (
     <motion.section
       className="flex flex-col pb-[60px]"
@@ -27,26 +36,14 @@ const   HomePage = () => {
 
       <motion.div
         variants={textVariant(0.75)}
-        className="inline-flex mt-[30px]"
+        className="inline-flex mt-[30px] gap-x-2"
       >
-        <Link
-          href="/"
-          className=" underline underline-offset-2 mr-[17px] px-4 py-2 font-semibold"
-        >
-          Github
-        </Link>
-        <Link
-          href="/"
-          className=" underline underline-offset-2 px-4 mr-[17px] py-2 font-semibold"
-        >
-          Instagram
-        </Link>
-        <Link
-          href="/"
-          className=" underline underline-offset-2 px-4 py-2 font-semibold"
-        >
-          Facebook
-        </Link>
+        <SocialMed href="https://github.com/abirangers" title="Github" />
+        <SocialMed href="https://www.instagram.com/b1ngers" title="Instagram" />
+        <SocialMed
+          href="https://www.facebook.com/groups/194737459319190/"
+          title="Facebook"
+        />
       </motion.div>
     </motion.section>
   );
