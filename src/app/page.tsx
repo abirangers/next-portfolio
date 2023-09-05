@@ -8,7 +8,7 @@ type baseMeta = {
 };
 
 const baseMetaData: baseMeta = {
-  title: "Home | Bingers",
+  title: "Ahmad Aby Ayyasi",
   description:
     "seorang Front-end Developer yang sangat-sangat senang sekali dengan yang namanya Slicing UI. Menikmati membangun semuanya dari situs app kecil hingga app yang elegan.",
   url: "https://bingers.vercel.app/",
