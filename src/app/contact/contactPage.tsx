@@ -74,6 +74,7 @@ const ContactPage = () => {
             <motion.span
               initial="hidden"
               whileInView="show"
+              viewport={{once: true}}
               variants={bounce()}
               className="relative"
             >
