@@ -28,7 +28,7 @@ const CardBio = ({ variant }: { variant: Variants }) => {
       className="rounded-lg border border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900 max-w-[312px] w-full h-[134px] p-[27px] flex items-center"
     >
       <div className="w-[80px] h-[80px] rounded-full overflow-hidden">
-      <Image src="/img/bioimage.JPG" alt="bio-image" width={80} height={80} className="w-full h-full object-cover"/>
+      <Image src="/img/bioimage.jpg" alt="bio-image" width={80} height={80} className="w-full h-full object-cover"/>
       </div>
       <div className="ml-[24px]">
         <BioAchieve number="1" title="Year experience">
