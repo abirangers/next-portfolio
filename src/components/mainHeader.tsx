@@ -16,7 +16,7 @@ const MainHeader = ({
       <p className="mb-[26px]">
         Halo👋, Saya seorang{" "}
         <span className="font-semibold">Front-end Developer</span> yang
-        sangat-sangat senang sekali dengan yang namanya Slicing UI. Menikmati
+        passionate dengan web accessibility dan responsive web design. Menikmati
         membangun semuanya dari situs app kecil hingga app yang elegan.
       </p>
     </motion.div>
